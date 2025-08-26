@@ -11,14 +11,6 @@ Automatically adds, updates, or removes JIRA ticket links in GitHub pull request
 | `jira-link-mode` | ❌       | Where to add the JIRA link in the PR body: `"body-start"` (default) or `"body-end"`                                                  |
 | `issue-pattern`  | ❌       | Optional custom regex to match JIRA issues. Must include exactly one capturing group for the ticket. Default: ([A-Z][A-Z0-9_]\*-\d+) |
 
-## JIRA Ticket Format
-
-This action detects JIRA tickets based on standard JIRA issue key formatting:  
-`<PROJECTKEY>-<NUMBER>` (e.g., `ABC-123`).
-
-- **PROJECTKEY** must be 2–10 uppercase letters (A–Z).
-- **NUMBER** must be a positive integer (no leading zeros).
-
 ## Required Permissions
 
 This action needs the following GitHub token permissions to run successfully:
@@ -28,6 +20,10 @@ This action needs the following GitHub token permissions to run successfully:
 
 By default, GitHub Actions provides a `GITHUB_TOKEN` with read/write access to your repository.  
 If you are running this action in a restricted environment, ensure that these minimum permissions are granted to the `GITHUB_TOKEN` or any personal access token you use.
+
+## Demo
+
+![Demo of JIRA PR Link Action](./docs/assets/demo.png)
 
 ## Example Workflow
 
